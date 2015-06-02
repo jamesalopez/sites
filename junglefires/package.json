@@ -1,0 +1,36 @@
+{
+  "name": "Junglefire",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^1.0.1",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.5.2",
+    "gulp-concat-css": "^2.1.1",
+    "gulp-connect": "^2.2.0",
+    "gulp-inject": "^1.2.0",
+    "gulp-jade": "^0.10.0",
+    "gulp-minify-css": "^0.3.11",
+    "gulp-notify": "^2.2.0",
+    "gulp-protractor": "0.0.12",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^1.3.3",
+    "gulp-sourcemaps": "^1.5.1",
+    "gulp-uglify": "^1.1.0",
+    "gulp-watch": "^4.2.0",
+    "jasmine-core": "^2.2.0",
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "main-bower-files": "^2.8.0",
+    "protractor": "^2.0.0"
+  }
+}

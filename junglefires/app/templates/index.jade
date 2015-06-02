@@ -1,0 +1,35 @@
+doctype html
+html(lang="en", data-ng-app="app")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0")
+        link(rel="stylesheet" href="css/vendor.min.css")
+        link(rel="stylesheet" href="css/app.min.css")
+
+
+    body(data-ng-controller="MainController")
+        .home-wrapper
+            .home-head.clearfix
+                .home-inner
+                    h1.home-logo Jungle fires
+                    nav
+                        ul.home-nav
+                            li
+                                a(href="#", data-ng-click="openModal()") bio
+                            li
+                                a(href="#") music
+                            li 
+                                a(href="#") facebook
+                            li
+                                a(href="#") instagram
+                            li
+                                a(href="#") twitter
+
+        #modal(data-ng-controller="ModalController", data-ng-class="{reveal : showModal}")
+            .modal-alert(data-ng-class="{reveal : showModal}")
+                include modals/bio
+
+        script(src="js/vendor.min.js")
+        script(src="js/app.min.js")
+
+

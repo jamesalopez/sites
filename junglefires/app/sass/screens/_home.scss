@@ -1,0 +1,74 @@
+.home-wrapper {
+	display: table;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	background-image: url("../images/dummy.jpg");
+	background-repeat: no-repeat;
+	background-position: 0 10rem;
+
+	.home-logo {
+		font-size: 6rem;
+		color: $font1;
+		text-transform: uppercase;
+	  	position: absolute;
+  		top: 3rem;
+
+		@media (min-width: 768px) {
+			float: left;
+		}
+
+		@media (max-width: 762px) {
+			font-size: 4rem;
+		}
+	}
+
+	.home-nav {
+		font-style: italic;
+		margin-top: 1rem;
+
+		@media (min-width: 768px) {
+			float: right;
+		}
+	}
+
+	li {
+		color: $font1;
+		&:after {
+			content: '/';
+			margin: 0 0.5rem;
+		}
+
+		&:last-child:after {
+			content: '';
+		}
+	}
+
+	.home-nav > li {
+		display: inline-block;
+
+	}
+
+	.home-nav > li + li {
+		margin-right: 0;
+	}
+
+	.home-head {
+		width: 100%;
+		@media (min-width: 768px) {
+			position: fixed;
+    		top: 0;
+		}
+	}
+
+	a {
+		color: $font1;
+	}
+
+
+}
+
+.home-inner {
+	padding: 6rem 2rem;
+}
+

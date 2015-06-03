@@ -16,11 +16,17 @@
     <div id="app" data-ng-controller="MainController">
       <div class="container">
         <h1 class="col-sm-7 col-xs-12"><a href="/" class="text-hide">Jungle Fires</a></h1>
-        <nav class="col-sm-5 pull-right col-xs-12"><a href="#" data-ng-click="openModal()">bio</a><a href="#">music</a><a href="https://www.facebook.com/JungleFires" taget="_blank">facebook</a><a href="https://instagram.com/junglefires/" taget="_blank">instagram</a><a href="https://twitter.com/junglefires" taget="_blank">twitter</a></nav>
+        <nav class="col-sm-5 pull-right col-xs-12"><a href="#" data-ng-click="openModal($event)">bio</a><a href="#">music</a><a href="https://www.facebook.com/JungleFires" taget="_blank">facebook</a><a href="https://instagram.com/junglefires/" taget="_blank">instagram</a><a href="https://twitter.com/junglefires" taget="_blank">twitter</a></nav>
       </div>
       <div class="fullscreen-container"><img src="images/jf-site.jpg" class="bg"></div>
     </div>
-    
+    <div id="modal" data-ng-controller="ModalController" data-ng-class="{reveal : showModal}">
+      <div data-ng-class="{reveal : showModal}" class="modal-container">
+        <div class="biography">
+          <p>Jungle Fires was born in the wrong hemisphere, late one night in a dank Boston apartment, winter 2012. Finding an unusual musical chemistry in one another&dash;and an inexplicably fluid creative process&dash;Menashé and Kéren agreed that it was time to commit things to tape. A chance opportunity and invitation from producers Brian Wertheim & David Kitay lead the band to Southern California a week later, thus marking the return of adfFires to her natural habitat and the beginning of a two-year labor of love recording their first record.</p><a href="#" data-ng-click="cancel($event)" class="close-icon glyphicon glyphicon-remove"></a>
+        </div>
+      </div>
+    </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/app.min.js"></script>
   </body>

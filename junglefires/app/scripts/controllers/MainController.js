@@ -1,12 +1,12 @@
 app.controller('MainController', ['$scope','$rootScope', function($scope,$rs){
     //Open bio modal
-    $scope.openModal = function(){
+    $scope.openModal = function(event){
 
         // broadcast event to modal
         $rs.$broadcast('modal:open');
 
         // stop parent events
-        event.stopPropagation();
+        event.preventDefault();
     };
 
     $rs.finishLoading = false;

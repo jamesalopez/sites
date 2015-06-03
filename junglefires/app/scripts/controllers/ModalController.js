@@ -20,9 +20,10 @@ app.controller('ModalController', ['$scope','$rootScope', function($scope, $rs){
 	});
 
 	// on cancel call
-	$scope.cancel = function(){
+	$scope.cancel = function($event){
 		$rs.$broadcast('modal:canceled');
 		$scope._hide();
+		$event.preventDefault();
 	};
 
 }]);

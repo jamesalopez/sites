@@ -17,7 +17,7 @@ html(lang="en")
                 h1.col-sm-7.col-xs-12
                     a.text-hide(href="/") Jungle Fires
                 nav.col-sm-5.pull-right.col-xs-12
-                    a(href="#", data-ng-click="openModal()") bio
+                    a(href="#", data-ng-click="openModal($event)") bio
                     a(href="#") music
                     a(href="https://www.facebook.com/JungleFires", taget="_blank") facebook
                     a(href="https://instagram.com/junglefires/", taget="_blank") instagram
@@ -25,9 +25,9 @@ html(lang="en")
             .fullscreen-container
                 img.bg(src="images/jf-site.jpg")
 
-        //- #modal(data-ng-controller="ModalController", data-ng-class="{reveal : showModal}")
-        //-     .modal-alert(data-ng-class="{reveal : showModal}")
-        //-         include modals/bio
+        #modal(data-ng-controller="ModalController", data-ng-class="{reveal : showModal}")
+            .modal-container(data-ng-class="{reveal : showModal}")
+                include modals/bio
 
 
         script(src="js/vendor.min.js")

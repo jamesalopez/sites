@@ -1,27 +1,71 @@
-// #modal {
-// 	position: absolute;
-// 	left: 0;
-// 	width: 100%;
-// 	height: 100%;
-// 	top: 0;
-// 	visibility: hidden;
-// 	z-index: 100000;
-// 	background: rgba(0,0,0,0);
-// }
+#modal {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	visibility: hidden;
+	z-index: 100000;
+	background: rgba(0,0,0,0);
+	color: #f5efd5;
+}
 
-// #modal.reveal {
-// 	background: rgba(0,0,0,0.7);
-// }
+#modal.reveal {
+	background: rgba(32,32,24,0.85);
+}
 
-// .modal-alert {
-// 	background: transparent;
-// 	position: absolute;
-// 	width: calc(100% - 2rem);
-// 	margin: 1rem;
-// 	top:  7.5rem;
-// 	text-align: center;
-// }
+.modal-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+.close-icon {
+	color: #FFF;
+	font-size: 4rem;
+	top: -4rem;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	height: 2rem;
+	font-weight: 100;
+	text-align: center;
+	@include custom-transition(all, 0.25s);
+	&:hover, &:active, &:visited {
+		color: #FFF;
+		opacity: 0.25;
+	}
+}
 
-// .modal-alert.reveal{
-// 	height: 100%;
-// }
+.biography {
+	max-width: 400px;
+	padding: 2rem;
+	position: relative;
+
+	p {
+		font-size: 1.4rem;
+		font-weight: 400;
+		letter-spacing: 1px;
+		font-style: italic;
+		text-align: center;
+	}
+}
+
+
+@media (min-width:768px){
+	.close-icon {
+		font-size: 4rem;
+		right: 0rem;
+		left: auto;
+		top: -4rem;
+		text-align: right;
+	}
+
+	.biography {
+		p {
+			text-align: left;
+			font-size: 1.8rem;
+		}
+	}
+
+}

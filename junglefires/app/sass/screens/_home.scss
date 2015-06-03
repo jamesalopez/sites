@@ -23,7 +23,14 @@ nav {
 		font-size: 1.4rem;
 		line-height: 2rem;
 		display: inline-block;
+		&:after {
+			padding: 0.5rem;
+			content: '/';
+		}
 
+		&:last-child:after {
+			content: '';
+		}
 		&:hover, &:active {
 			color: #f5efd5;
 			opacity: 0.75;
@@ -71,17 +78,8 @@ img.bg {
 	nav {
 		text-align: right;
 		margin-top: 10rem;
-		padding: 0;
 		a {
 			font-size: 1.8rem;
-			&:after {
-				padding: 0.5rem;
-				content: '/';
-			}
-
-			&:last-child:after {
-				content: '';
-			}
 		}
 	}
 }

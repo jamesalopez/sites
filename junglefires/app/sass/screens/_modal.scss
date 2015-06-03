@@ -8,10 +8,16 @@
 	z-index: 100000;
 	background: rgba(0,0,0,0);
 	color: #f5efd5;
+	opacity: 0;
+	@include custom-transition(all, 0.65s);
+	@include custom-transform(scale(1.25));
 }
 
 #modal.reveal {
-	background: rgba(32,32,24,0.85);
+	visibility: visible;
+	opacity: 1;
+	background: rgba(32,32,24,0.95);
+	@include custom-transform(scale(1));
 }
 
 .modal-container {
@@ -43,7 +49,7 @@
 	position: relative;
 
 	p {
-		font-size: 1.4rem;
+		font-size: 1.6rem;
 		font-weight: 400;
 		letter-spacing: 1px;
 		font-style: italic;
@@ -55,10 +61,11 @@
 @media (min-width:768px){
 	.close-icon {
 		font-size: 4rem;
-		right: 0rem;
+		right: -16rem;
 		left: auto;
 		top: -4rem;
-		text-align: right;
+		height: 2rem;
+		text-align: center;
 	}
 
 	.biography {

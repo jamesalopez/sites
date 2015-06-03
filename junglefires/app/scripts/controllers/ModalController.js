@@ -5,13 +5,11 @@ app.controller('ModalController', ['$scope','$rootScope', function($scope, $rs){
 	// show modal
 	$scope._show = function(){
 		$scope.showModal = true;
-		$scope.$el.css('visibility', 'visible');
 	};
 
 	// hide modal
 	$scope._hide = function(){
 		$scope.showModal = false;
-		$scope.$el.css('visibility', '');
 	};
 
 	// on open call

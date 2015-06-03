@@ -24,6 +24,9 @@ body {
 	position: relative;
 	visibility: hidden;
 }
+.container {
+	z-index: 10;
+}
 
 .loading {
 	height: 100%;

@@ -23,6 +23,7 @@ nav {
 		font-size: 1.4rem;
 		line-height: 2rem;
 		display: inline-block;
+		padding: 0.25rem 0 0 0;
 		&:after {
 			padding: 0.5rem;
 			content: '/';
@@ -80,6 +81,7 @@ img.bg {
 		margin-top: 10rem;
 		a {
 			font-size: 1.8rem;
+			padding: 1rem 0 1rem 0.25rem;
 		}
 	}
 }

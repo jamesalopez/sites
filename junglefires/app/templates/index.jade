@@ -1,5 +1,5 @@
 doctype html
-html(lang="en", data-ng-app="app")
+html(lang="en")
     head
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0")
@@ -7,27 +7,21 @@ html(lang="en", data-ng-app="app")
         link(rel="stylesheet" href="css/app.min.css")
 
 
-    body(data-ng-controller="MainController")
-        .home-wrapper
-            .home-head.clearfix
-                .home-inner
-                    h1.home-logo Jungle fires
-                    nav
-                        ul.home-nav
-                            li
-                                a(href="#", data-ng-click="openModal()") bio
-                            li
-                                a(href="#") music
-                            li 
-                                a(href="#") facebook
-                            li
-                                a(href="#") instagram
-                            li
-                                a(href="#") twitter
+    body(data-ng-app="app")
+        #app(data-ng-controller="MainController")
+            h1.col-sm-7.col-xs-12
+                a.text-hide(href="/") Jungle Fires
+            nav.col-sm-5.pull-right.col-xs-12
+                a(href="#", data-ng-click="openModal()") bio
+                a(href="#") music
+                a(href="https://www.facebook.com/JungleFires", taget="_blank") facebook
+                a(href="https://instagram.com/junglefires/", taget="_blank") instagram
+                a(href="https://twitter.com/junglefires", taget="_blank") twitter
 
-        #modal(data-ng-controller="ModalController", data-ng-class="{reveal : showModal}")
-            .modal-alert(data-ng-class="{reveal : showModal}")
-                include modals/bio
+        //- #modal(data-ng-controller="ModalController", data-ng-class="{reveal : showModal}")
+        //-     .modal-alert(data-ng-class="{reveal : showModal}")
+        //-         include modals/bio
+        img.bg(src="images/jf-site.jpg")
 
         script(src="js/vendor.min.js")
         script(src="js/app.min.js")

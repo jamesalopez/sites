@@ -1,74 +1,79 @@
-.home-wrapper {
-	display: table;
-	width: 100%;
-	height: 100%;
-	min-height: 100%;
-	background-image: url("../images/dummy.jpg");
-	background-repeat: no-repeat;
-	background-position: 0 10rem;
+h1{
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	max-width: 100%;
+	> a {
+		background: url('../images/junglefires-logo.png') no-repeat center center;
+		background-size: 100%;
+		width: 100%;
+		min-height: 115px !important;
+		padding: 0;
+		display: block;
 
-	.home-logo {
-		font-size: 6rem;
-		color: $font1;
-		text-transform: uppercase;
-	  	position: absolute;
-  		top: 3rem;
-
-		@media (min-width: 768px) {
-			float: left;
-		}
-
-		@media (max-width: 762px) {
-			font-size: 4rem;
-		}
 	}
+}
 
-	.home-nav {
-		font-style: italic;
-		margin-top: 1rem;
-
-		@media (min-width: 768px) {
-			float: right;
-		}
-	}
-
-	li {
-		color: $font1;
-		&:after {
-			content: '/';
-			margin: 0 0.5rem;
-		}
-
-		&:last-child:after {
-			content: '';
-		}
-	}
-
-	.home-nav > li {
+nav {
+	text-align: center;
+	a {
+		@include custom-transition(all, 0.65s);
+		color: #f5efd5;
+		padding: 0.5rem;
+		font-size: 1.4rem;
+		line-height: 2rem;
 		display: inline-block;
 
-	}
-
-	.home-nav > li + li {
-		margin-right: 0;
-	}
-
-	.home-head {
-		width: 100%;
-		@media (min-width: 768px) {
-			position: fixed;
-    		top: 0;
+		&:hover, &:active {
+			color: #f5efd5;
+			opacity: 0.75;
+		}
+		&:active {
+			opacity: 0.5;
+		}
+		&:visited {
+			color: #f5efd5;
 		}
 	}
+}
 
-	a {
-		color: $font1;
+
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1440px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1000;
+}
+
+@media screen and (max-width: 1440px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -720px;   /* 50% */
+  }
+}
+
+@media (min-width:768px){
+
+	h1 {
+		margin: 6.5rem 0 0;
+		padding: 0 0 0 6rem !important;
+		max-width: 660px !important;
 	}
-
-
+	nav {
+		text-align: right;
+		margin-top: 10rem;
+		padding-right: 4rem !important;
+		a {
+			font-size: 1.8rem;
+		}
+	}
 }
-
-.home-inner {
-	padding: 6rem 2rem;
-}
-

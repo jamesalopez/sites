@@ -165,7 +165,7 @@ gulp.task('connect', function () {
 
 //Server
 gulp.task('serve', ['scripts','templates','styles','images'], function () {
-    gulp.start('watch');
+    return gulp.start('watch');
 });
 
 

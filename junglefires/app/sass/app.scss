@@ -8,7 +8,20 @@ html, body {
 	margin: 0;
 	overflow: hidden;
 	position: relative;
+}
+body {
 	background: $background;
+	font-family: TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif;
+	font-weight: normal;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+	min-height: 100%;
+	position: relative;
 }
 
 a, a:hover, a:focus, a:active {
@@ -18,4 +31,3 @@ a, a:hover, a:focus, a:active {
 
 @import "screens/home.scss";
 @import "screens/modal.scss";
-@import "screens/bio.scss";

@@ -19,3 +19,19 @@
 	-ms-flex-item-align: $alignment;
 	align-self: $alignment;
 }
+
+@mixin custom-transition($property, $duration: 0.5s, $timing: cubic-bezier(0.23,1,0.32,1)){
+  -webkit-transition: $property $duration $timing;
+  -moz-transition: $property $duration $timing;
+  -ms-transition: $property $duration $timing;
+  -o-transition: $property $duration $timing;
+  transition: $property $duration $timing;
+}
+
+@mixin custom-transform($property){
+  -webkit-transform: $property;
+  -moz-transform: $property;
+  -ms-transform: $property;
+  -o-transform: $property;
+  transform: $property;
+}

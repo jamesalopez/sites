@@ -20,7 +20,6 @@ nav {
 	a {
 		@include custom-transition(all, 0.65s);
 		color: #f5efd5;
-		padding: 0.5rem;
 		font-size: 1.4rem;
 		line-height: 2rem;
 		display: inline-block;
@@ -75,6 +74,14 @@ img.bg {
 		padding: 0;
 		a {
 			font-size: 1.8rem;
+			&:after {
+				padding: 0.5rem;
+				content: '/';
+			}
+
+			&:last-child:after {
+				content: '';
+			}
 		}
 	}
 }

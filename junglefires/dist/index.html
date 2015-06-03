@@ -6,11 +6,21 @@
     <link rel="stylesheet" href="css/vendor.min.css">
     <link rel="stylesheet" href="css/app.min.css">
   </head>
-  <body data-ng-app="app">
+  <body data-ng-app="app" data-ng-class="{'finishLoading': finishLoading}">
+    <div class="loading">
+      <div class="loader-inner ball-clip-rotate-pulse">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
     <div id="app" data-ng-controller="MainController">
-      <h1 class="col-sm-7 col-xs-12"><a href="/" class="text-hide">Jungle Fires</a></h1>
-      <nav class="col-sm-5 pull-right col-xs-12"><a href="#" data-ng-click="openModal()">bio</a><a href="#">music</a><a href="https://www.facebook.com/JungleFires" taget="_blank">facebook</a><a href="https://instagram.com/junglefires/" taget="_blank">instagram</a><a href="https://twitter.com/junglefires" taget="_blank">twitter</a></nav>
-    </div><img src="images/jf-site.jpg" class="bg">
+      <div class="container">
+        <h1 class="col-sm-7 col-xs-12"><a href="/" class="text-hide">Jungle Fires</a></h1>
+        <nav class="col-sm-5 pull-right col-xs-12"><a href="#" data-ng-click="openModal()">bio</a><a href="#">music</a><a href="https://www.facebook.com/JungleFires" taget="_blank">facebook</a><a href="https://instagram.com/junglefires/" taget="_blank">instagram</a><a href="https://twitter.com/junglefires" taget="_blank">twitter</a></nav>
+      </div>
+      <div class="fullscreen-container"><img src="images/jf-site.jpg" class="bg"></div>
+    </div>
+    
     <script src="js/vendor.min.js"></script>
     <script src="js/app.min.js"></script>
   </body>

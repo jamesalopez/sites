@@ -3,6 +3,7 @@ h1{
 	position: relative;
 	margin: 0 auto;
 	max-width: 100%;
+
 	> a {
 		background: url('../images/junglefires-logo.png') no-repeat center center;
 		background-size: 100%;
@@ -38,6 +39,7 @@ nav {
 }
 
 
+
 img.bg {
   /* Set rules to fill background */
   min-height: 100%;
@@ -51,7 +53,6 @@ img.bg {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1000;
 }
 
 @media screen and (max-width: 1440px) { /* Specific to this particular image */
@@ -65,15 +66,45 @@ img.bg {
 
 	h1 {
 		margin: 6.5rem 0 0;
-		padding: 0 0 0 6rem !important;
+		padding: 0;
 		max-width: 660px !important;
 	}
 	nav {
 		text-align: right;
 		margin-top: 10rem;
-		padding-right: 4rem !important;
+		padding: 0;
 		a {
 			font-size: 1.8rem;
 		}
 	}
+}
+
+.fullscreen-container {
+	height: 100%;
+	width: 100%;
+	position: relative;
+    z-index: -1000;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+	@include custom-transform(scale(1));
+}
+.finishLoading .fullscreen-container {
+	visibility: visible;
+	-webkit-animation: pop-in 0.75s;
+	-moz-animation: pop-in 0.75s;
+	-ms-animation: pop-in 0.75s;
+}
+
+@-webkit-keyframes pop-in {
+0% { opacity: 0; -webkit-transform: scale(1.15); }
+100% { opacity: 1; -webkit-transform: scale(1); }
+}
+@-moz-keyframes pop-in {
+0% { opacity: 0; -moz-transform: scale(1.15); }
+100% { opacity: 1; -moz-transform: scale(1); }
+}
+@keyframes pop-in {
+0% { opacity: 0; transform: scale(1.15); }
+100% { opacity: 1; transform: scale(1); }
 }

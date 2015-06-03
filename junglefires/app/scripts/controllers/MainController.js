@@ -1,5 +1,5 @@
 app.controller('MainController', ['$scope','$rootScope', function($scope,$rs){
-	//Open bio modal
+    //Open bio modal
     $scope.openModal = function(){
 
         // broadcast event to modal
@@ -8,4 +8,14 @@ app.controller('MainController', ['$scope','$rootScope', function($scope,$rs){
         // stop parent events
         event.stopPropagation();
     };
+
+    $rs.finishLoading = false;
+
+    $(window).load(function() {
+        setTimeout(function(){
+            $rs.finishLoading = true;
+            $rs.$apply();
+        }, 500);
+    });
+
 }]);

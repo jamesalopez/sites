@@ -58,7 +58,8 @@ var scripts = {
  */
 var styles = {
     libraries: [
-        configPaths.bower + 'bootstrap/dist/css/bootstrap.min.css'
+        configPaths.bower + 'bootstrap/dist/css/bootstrap.min.css',
+        configPaths.bower + 'loaders.css/loaders.min.css'
     ],
     app: [
         configPaths.app + 'sass/**/*.scss'
@@ -172,11 +173,6 @@ gulp.task('serve', ['scripts','templates','styles','images'], function () {
 // Watch
 gulp.task('watch', ['connect'], function () {
 
-    gulp.watch(configPaths.app + '**/*.*', function (event) {
-        return gulp.src(event.path)
-            .pipe(connect.reload());
-    });
-
     // Watch .scss files
     gulp.watch(configPaths.app + 'sass/**/*.scss', ['styles']);
 
@@ -191,6 +187,11 @@ gulp.task('watch', ['connect'], function () {
 
     // Watch vendor folder
     gulp.watch(configPaths.bower, ['styles', 'scripts']);
+
+    gulp.watch(configPaths.app + '**/*.*', function (event) {
+        return gulp.src(event.path)
+            .pipe(connect.reload());
+    });
 });
 
 //Build all

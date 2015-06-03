@@ -7,21 +7,28 @@ html(lang="en")
         link(rel="stylesheet" href="css/app.min.css")
 
 
-    body(data-ng-app="app")
+    body(data-ng-app="app", data-ng-class="{'finishLoading': finishLoading}")
+        .loading
+            div.loader-inner.ball-clip-rotate-pulse
+                div
+                div
         #app(data-ng-controller="MainController")
-            h1.col-sm-7.col-xs-12
-                a.text-hide(href="/") Jungle Fires
-            nav.col-sm-5.pull-right.col-xs-12
-                a(href="#", data-ng-click="openModal()") bio
-                a(href="#") music
-                a(href="https://www.facebook.com/JungleFires", taget="_blank") facebook
-                a(href="https://instagram.com/junglefires/", taget="_blank") instagram
-                a(href="https://twitter.com/junglefires", taget="_blank") twitter
+            .container
+                h1.col-sm-7.col-xs-12
+                    a.text-hide(href="/") Jungle Fires
+                nav.col-sm-5.pull-right.col-xs-12
+                    a(href="#", data-ng-click="openModal()") bio
+                    a(href="#") music
+                    a(href="https://www.facebook.com/JungleFires", taget="_blank") facebook
+                    a(href="https://instagram.com/junglefires/", taget="_blank") instagram
+                    a(href="https://twitter.com/junglefires", taget="_blank") twitter
+            .fullscreen-container
+                img.bg(src="images/jf-site.jpg")
 
         //- #modal(data-ng-controller="ModalController", data-ng-class="{reveal : showModal}")
         //-     .modal-alert(data-ng-class="{reveal : showModal}")
         //-         include modals/bio
-        img.bg(src="images/jf-site.jpg")
+
 
         script(src="js/vendor.min.js")
         script(src="js/app.min.js")

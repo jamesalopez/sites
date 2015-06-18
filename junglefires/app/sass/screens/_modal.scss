@@ -21,9 +21,15 @@
 }
 
 .modal-container {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	display: flex;
-	align-items: center;
+
+	-webkit-justify-content: center;
 	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
 	height: 100%;
 }
 .close-icon {

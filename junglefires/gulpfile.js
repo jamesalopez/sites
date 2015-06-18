@@ -132,7 +132,7 @@ gulp.task('clean-templates', function () {
 });
 
 gulp.task('templates', ['clean-templates'], function () {
-    return gulp.src('app/templates/**/*.jade')
+    return gulp.src('app/templates/*.jade')
         .pipe(jade({pretty: true}))
         .pipe(gulp.dest(configPaths.dist))
 });

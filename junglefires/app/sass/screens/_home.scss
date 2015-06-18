@@ -48,25 +48,25 @@ nav {
 
 
 img.bg {
-  /* Set rules to fill background */
-  min-height: 100%;
-  min-width: 1440px;
+	/* Set rules to fill background */
+	min-height: 100%;
+
+	min-width: 1440px;
+	/* Set up proportionate scaling */
+	width: 100%;
+	height: auto;
 	
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
-	
-  /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
+	/* Set up positioning */
+	position: fixed;
+	top: 0;
+	left: 0;
 }
 
 @media screen and (max-width: 1440px) { /* Specific to this particular image */
-  img.bg {
-    left: 50%;
-    margin-left: -720px;   /* 50% */
-  }
+	img.bg {
+		left: 50%;
+		margin-left: -720px;   /* 50% */
+	}
 }
 
 @media (min-width:768px){
@@ -90,12 +90,13 @@ img.bg {
 	height: 100%;
 	width: 100%;
 	position: relative;
-    z-index: -1000;
-    visibility: hidden;
-    position: absolute;
-    top: 0;
+	z-index: -1000;
+	visibility: hidden;
+	position: absolute;
+	top: 145px;
 	@include custom-transform(scale(1));
 }
+
 .finishLoading .fullscreen-container {
 	visibility: visible;
 	-webkit-animation: pop-in 0.75s;
@@ -104,14 +105,14 @@ img.bg {
 }
 
 @-webkit-keyframes pop-in {
-0% { opacity: 0; -webkit-transform: scale(1.15); }
-100% { opacity: 1; -webkit-transform: scale(1); }
+	0% { opacity: 0; -webkit-transform: scale(1.15); }
+	100% { opacity: 1; -webkit-transform: scale(1); }
 }
 @-moz-keyframes pop-in {
-0% { opacity: 0; -moz-transform: scale(1.15); }
-100% { opacity: 1; -moz-transform: scale(1); }
+	0% { opacity: 0; -moz-transform: scale(1.15); }
+	100% { opacity: 1; -moz-transform: scale(1); }
 }
 @keyframes pop-in {
-0% { opacity: 0; transform: scale(1.15); }
-100% { opacity: 1; transform: scale(1); }
+	0% { opacity: 0; transform: scale(1.15); }
+	100% { opacity: 1; transform: scale(1); }
 }

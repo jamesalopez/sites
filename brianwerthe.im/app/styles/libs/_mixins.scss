@@ -1,0 +1,146 @@
+@mixin link($up:#000, $down:#000) {
+	color: $up;
+	&:active {
+		color: $down;
+	}
+}
+
+@mixin input-placeholder {
+	&.placeholder { @content; }
+	&::-moz-placeholder { @content; }
+	&::-moz-placeholder { @content; }
+	&:-ms-input-placeholder { @content; }
+	&::-webkit-input-placeholder { @content; }
+}
+
+@mixin custom-boxshadow($properties) {
+	-webkit-box-shadow: $properties;
+	-moz-box-shadow: $properties;
+	-ms-box-shadow: $properties;
+	box-shadow: $properties;
+}
+
+@mixin custom-transition($property, $duration: 0.5s, $timing: cubic-bezier(0.23,1,0.32,1)){
+	-webkit-transition: $property $duration $timing;
+	-moz-transition: $property $duration $timing;
+	-ms-transition: $property $duration $timing;
+	-o-transition: $property $duration $timing;
+	transition: $property $duration $timing;
+}
+
+@mixin custom-transform($property){
+	-webkit-transform: $property;
+	-moz-transform: $property;
+	-ms-transform: $property;
+	-o-transform: $property;
+	transform: $property;
+}
+
+@mixin custom-scroll(){
+	overflow-y: scroll;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch; // adds scrolling space
+}
+
+@mixin border-radius($property){
+	-webkit-border-radius: $property;
+	-moz-border-radius: $property;
+	-ms-border-radius: $property;
+	-o-border-radius: $property;
+	border-radius: $property;
+}
+
+@mixin border-left-radius($property){
+	-webkit-border-top-left-radius: $property;
+	-moz-border-top-left-radius: $property;
+	-ms-border-top-left-radius: $property;
+	-o-border-top-left-radius: $property;
+	border-top-left-radius: $property;
+
+	-webkit-border-bottom-left-radius: $property;
+	-moz-border-bottom-left-radius: $property;
+	-ms-border-bottom-left-radius: $property;
+	-o-border-bottom-left-radius: $property;
+	border-bottom-left-radius: $property;
+}
+
+@mixin border-right-radius($property){
+	-webkit-border-top-right-radius: $property;
+	-moz-border-top-right-radius: $property;
+	-ms-border-top-right-radius: $property;
+	-o-border-top-right-radius: $property;
+	border-top-right-radius: $property;
+	
+	-webkit-border-bottom-right-radius: $property;
+	-moz-border-bottom-right-radius: $property;
+	-ms-border-bottom-right-radius: $property;
+	-o-border-bottom-right-radius: $property;
+	border-bottom-right-radius: $property;
+}
+
+@mixin flexbox($direction: column) {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+	-webkit-flex-direction: $direction;
+	-ms-flex-direction: $direction;
+	-moz-flex-direction: $direction;
+	flex-direction: $direction;
+	//flex-direction: row | row-reverse | column | column-reverse;
+}
+
+@mixin flex($values) {
+	-webkit-box-flex: $values;      /* OLD - iOS 6-, Safari 3.1-6 */
+	-moz-box-flex: $values;         /* OLD - Firefox 19- */
+	-webkit-flex: $values;          /* Chrome */
+	-ms-flex: $values;              /* IE 10 */
+	flex: $values;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+@mixin text-overflow(){
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+@mixin clearfix(){
+	overflow: auto;
+	zoom: 1;
+}
+
+@mixin centerer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include custom-transform(translate(-50%, -50%));
+}
+
+@mixin ahover($color, $value) {
+	&:hover {
+		color: darken($color, $value);
+		text-decoration: none;
+	}
+}
+
+// media queries mixings
+
+@mixin bp-small {
+	@media only screen and (min-width: 40em)  {
+		@content;
+	}
+}
+
+@mixin bp-medium {
+	@media only screen and (min-width: 48em) {
+		@content;
+	}
+}
+
+@mixin bp-large {
+	@media only screen and (min-width: 75em) {
+		@content;
+	}
+}

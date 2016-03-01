@@ -2,6 +2,7 @@
 @import "libs/reset";
 @import "libs/mixins";
 @import "libs/box";
+@import "libs/sanspro";
 
 
 /*
@@ -26,6 +27,7 @@ html, body {
 	overflow: hidden;
 }
 
+
 /*
  *
  * ------------------------------------------------------------
@@ -38,29 +40,38 @@ html, body {
 
 .wrapper {
 	@include flexbox();
-    background-image: url('../images/desktopbackground_image.png');
-    width: 100%;
-    height: 100%;
+	background-image: url('../images/mobilebackground_image.jpg');
 	background-size: cover;
 	background-position: center;
+	width: 100%;
+	height: 100%;
+	@include bp-small {
+		background-image: url('../images/desktopbackground_image.png');
+	}
 }
 
-header {
+.content {
 	@include flex(1);
 	@include flexbox();
 	justify-content: center;
 }
 
 h1 {
+
 	text-align: center;
 	color: #fff;
-	font-size: 300%;
-	font-weight: bold;
+	font-family: 'source_sans_prosemibold';
+	font-size: 3rem;
+	letter-spacing: .07rem;
 }
 
-h2 {
-	text-align: center;
+a {
 	color: #fff;
-	font-size: 200%;
-	padding-left: 220px;
+	font-family: 'source_sans_prosemibold';
+	font-size: 2.26rem;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #000;
 }

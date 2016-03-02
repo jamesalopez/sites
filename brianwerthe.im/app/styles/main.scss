@@ -145,7 +145,7 @@ a:hover{
  	height: 2.625rem;
  	width: 2.9375rem;
  	opacity: 0.8;
- 	fill: #fff;
+ 	fill: #080808;
  	@include custom-transition(opacity, 1.5s, cubic-bezier(0.23,1,0.32,1));
  	@include bp-small {
  		height: 3.5rem;

@@ -133,9 +133,10 @@ a:hover{
  .logo {
  	display: inline-block;
  	position: relative;
-	margin-bottom: 4.3rem;
-	padding: 0.85rem 1.0312rem;
+	margin-bottom: 1.6rem;
+	padding: 2.5rem;
 	@include bp-small {
+		margin-bottom: 4.3rem;
 		margin-right: 6rem;
 		padding: 0;
 	}
@@ -148,8 +149,8 @@ a:hover{
  	fill: #fff;
  	@include custom-transition(opacity, 1.5s, cubic-bezier(0.23,1,0.32,1));
  	@include bp-small {
- 		height: 4.2rem;
- 		width: 4.7rem;
+ 		height: 3.5rem;
+ 		width: 4rem;
  	}
  }
 

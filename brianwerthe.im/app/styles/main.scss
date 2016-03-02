@@ -109,3 +109,39 @@ h1 a{
 a:hover{
 	color: #000;
 }
+
+
+
+/*
+ *
+ * ------------------------------------------------------------
+ *
+ * Footer used for aligning SVG logo
+ *
+ * ------------------------------------------------------------
+ */
+
+ footer {
+ 	text-align: center;
+ 	@include bp-small {
+ 		text-align: right;
+ 	}
+ }
+
+svg {
+	height: 2.625rem;
+	width: 2.9375rem;
+	opacity: 0.8;
+	fill: #fff;
+	margin-bottom: 4.3rem;
+	@include custom-transition(opacity, 1.5s, cubic-bezier(0.23,1,0.32,1));
+	@include bp-small {
+		height: 4.2rem;
+		width: 4.7rem;
+		margin-right: 6rem;
+	}
+}
+
+svg:hover {
+	opacity: 1;
+}

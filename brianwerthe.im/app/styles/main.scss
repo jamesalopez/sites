@@ -50,6 +50,15 @@ html, body {
 	}
 }
 
+/*
+ *
+ * ------------------------------------------------------------
+ *
+ * Basic CSS
+ *
+ * ------------------------------------------------------------
+ */
+
 .content {
 	@include flex(1);
 	@include flexbox();
@@ -64,7 +73,7 @@ h1 {
 	font-size: 3rem;
 	letter-spacing:0.0437rem;
 	text-transform: uppercase;
-	@include bp-small{
+	@include bp-small {
 		font-size:4.8rem;
 		letter-spacing: .07rem;
 	}
@@ -81,6 +90,21 @@ a {
 		font-size:3.6rem;
 	}
 }
+
+/*
+ *
+ * ------------------------------------------------------------
+ *
+ * Vertical Centering for email tag
+ *
+ * ------------------------------------------------------------
+ */
+
+h1 a{
+	height: 100%;
+	vertical-align: 3px;
+}
+
 
 a:hover{
 	color: #000;
